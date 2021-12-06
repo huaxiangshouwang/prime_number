@@ -1,0 +1,14 @@
+all_prime_numbers = [3,5,]
+number = input ("please input a number")
+number = int(number)
+current_number = 7
+while current_number <= number:
+    for prime_number in all_prime_numbers:
+        if current_number % prime_number == 0:
+            break
+        elif prime_number * prime_number > current_number:
+            all_prime_numbers.append(current_number)
+            break
+    current_number += 2
+for prime_number in all_prime_numbers:
+    print(prime_number)
